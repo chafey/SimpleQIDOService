@@ -29,6 +29,13 @@ namespace SimpleQIDOService.Lib
             return _studies;
         }
 
+        public Study FindByStudyUid(string studyUid)
+        {
+            Study study;
+            _studies.TryGetValue(studyUid, out study);
+            return study;
+        }
+
         private void LoadDirectory(string path)
         {
             var files = Directory.EnumerateFiles(path);
@@ -82,8 +89,7 @@ namespace SimpleQIDOService.Lib
 
             return study;
         }
-
-
+        
         private Series GetOrCreateSeries(Study study, DicomFile dicomFile)
         {
             var seriesUid = dicomFile.Dataset.Get<string>(DicomTag.SeriesInstanceUID);
@@ -96,6 +102,8 @@ namespace SimpleQIDOService.Lib
                 series.SeriesDescription = dicomFile.Dataset.Get<string>(DicomTag.SeriesDescription);
                 series.Modality = dicomFile.Dataset.Get<string>(DicomTag.Modality);
                 series.SeriesNumber = dicomFile.Dataset.Get<string>(DicomTag.SeriesNumber);
+                series.PerformedProcedureStepStartDate = dicomFile.Dataset.Get<string>(DicomTag.PerformedProcedureStepStartDate);
+                series.PerformedProcedureStepStartTime = dicomFile.Dataset.Get<string>(DicomTag.PerformedProcedureStepStartTime);
             }
             return series;
         }

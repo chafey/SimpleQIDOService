@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CORSTest</RootNamespace>
-    <AssemblyName>CORSTest</AssemblyName>
+    <RootNamespace>SimpleQIDOService</RootNamespace>
+    <AssemblyName>SimpleQIDOService</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -93,7 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\StudiesController.cs" />
+    <Compile Include="Controllers\QIDOController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -108,7 +108,11 @@
     <Compile Include="Models\Series.cs" />
     <Compile Include="Models\Study.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\FileImplementation\InstanceQuery.cs" />
+    <Compile Include="Services\FileImplementation\SeriesQuery.cs" />
     <Compile Include="Services\FileImplementation\StudyQuery.cs" />
+    <Compile Include="Services\Interfaces\IInstanceQuery.cs" />
+    <Compile Include="Services\Interfaces\ISeriesQuery.cs" />
     <Compile Include="Services\Interfaces\IStudyQuery.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -18,7 +18,7 @@ namespace SimpleQIDOService.Lib
             //new DicomTag(0x0008, 0x0061), // Modalities In Study
             new DicomTag(0x0008, 0x0090), // Referring Physicians Name
             new DicomTag(0x0008, 0x0201), // Time Zone Offset from UTC
-            new DicomTag(0x0008, 0x1030), // Study Description
+            new DicomTag(0x0008, 0x1030), // Study Description (NOTE: This is not listed in Table 6.7.1-2 in the DICOM standard which is probably incorrect)
             //new DicomTag(0x0008, 0x1190), // Retrieve URL (WADO-RS only)
             new DicomTag(0x0010, 0x0010), // Patient's Name
             new DicomTag(0x0010, 0x0020), // Patient ID
@@ -38,7 +38,7 @@ namespace SimpleQIDOService.Lib
         public static DicomTag[] SeriesTags =
         {
             new DicomTag(0x0008, 0x0005), // Specific Character Set
-            new DicomTag(0x0008, 0x0056), // Modality
+            new DicomTag(0x0008, 0x0060), // Modality
             new DicomTag(0x0008, 0x0201), // Time Zone Offset from UTC
             new DicomTag(0x0008, 0x103E), // Series Description
             new DicomTag(0x0008, 0x1190), // Retrieve URL
@@ -48,6 +48,11 @@ namespace SimpleQIDOService.Lib
             new DicomTag(0x0040, 0x0244), // Performed Procedure Step Start Date
             new DicomTag(0x0040, 0x0245), // Performed Procedure Step Start Time
             new DicomTag(0x0040, 0x0275), // Request Attribute Sequence
+
+        };
+
+        public static DicomTag[] AllSeriesTags =
+        {
 
         };
 
@@ -65,6 +70,12 @@ namespace SimpleQIDOService.Lib
             new DicomTag(0x0028, 0x0100), // Bits Allocated
             new DicomTag(0x0028, 0x0008), // Number of Frames
         };
+
+        public static DicomTag[] AllInstanceTags =
+        {
+
+        };
+
 
     }
 }

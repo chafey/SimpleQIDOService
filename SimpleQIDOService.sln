@@ -5,6 +5,11 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleQIDOService", "SimpleQIDOService\SimpleQIDOService.csproj", "{54239241-004D-4B5C-80F9-055B981AC9BE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B0E544A9-B354-4118-AF0C-CB3863FC8144}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

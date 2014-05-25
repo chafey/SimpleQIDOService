@@ -16,6 +16,8 @@ namespace SimpleQIDOService.Models
         public string SeriesDescription { get; set; }
         public string Modality { get; set; }
         public string SeriesNumber { get; set; }
+        public string PerformedProcedureStepStartDate;
+        public string PerformedProcedureStepStartTime;
 
         public int NumberOfSeriesRelatedInstances
         {
