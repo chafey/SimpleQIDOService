@@ -88,7 +88,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="License.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -117,8 +116,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="README.md" />
-    <Content Include="ChangeLog.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

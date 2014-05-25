@@ -30,7 +30,7 @@ Features
 
 * All non-relational queries:
   * Search for Studies: /studies[?query]
-  * Search for Series: /studies/{studyInstanceUid}/series/[?query]
+  * Search for Series: /studies/{studyInstanceUid}/series[?query]
   * Search for Instances: /studies/{studyInstanceUid}/series/{seriesInstanceUid}/instances[?query]
   * Search for Instances: /studies/{studyInstanceUid}/instances[?query]
 * Support for application/json results
@@ -43,8 +43,8 @@ Not Supported
 -------------
 
 * Relational queries
-  * Search for Series: /series/[?query]
-  * Search for Instances: /instances/[?query]
+  * Search for Series: /series[?query]
+  * Search for Instances: /instances[?query]
 * multipart/related; type=application/dicom+xml responses
 * fuzzymatching
 * Matches on sequences (e.g. RequestAttributeSequence)
@@ -69,25 +69,31 @@ FAQ
 ===
 
 _Why don't you support application/dicom+xml responses?_
+
 I am focused on building browser based applications and application/json responses are easier to work with in JavaScript.
-If you want to add this, please contact me first to discuss.
+If you want to add this, please contact me to discuss.
 
 _Why don't you support relational queries?_
-I have no current need for this.  If you want to add this, please contact me first to discuss.
+
+I have no current need for this.  If you want to add this, please contact me to discuss.
 
 _Why don't you support wildcard matching for all attributes?_
+
 I only implemented wildcard matching for the attributes I might actually use it on.  Some of the attributes didn't seem to make
-senseto do wildcard matching on - for example, series number or modality.  If someone can explain to me why wildcard
+sense to do wildcard matching on - for example, series number or modality.  If someone can explain to me why wildcard
 matching is important on these, I might add it.
 
 _Why don't you support includefield=all?_
+
 I don't currently have a need for this.  It should be straightforward to add this though as I added some plumbing for it already.
-Contact me if you want to add this to coordinate.
+Contact me to discuss.
 
 _Why don't you support sequences?_
+
 I have no need for this right now.  If you want to add this, please submit a pull request
 
 _Why don't you support fuzzymatching?_
+
 I don't know what this is and the current matching functionality meets my immediate needs.  If you want to add this, please contact me
 to discuss.
 

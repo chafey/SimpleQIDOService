@@ -2,7 +2,6 @@
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Cors;
-using System.Web.Http.Results;
 using SimpleQIDOService.Lib;
 using SimpleQIDOService.Services.FileImplementation;
 using SimpleQIDOService.Services.Interfaces;
